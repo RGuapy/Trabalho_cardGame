@@ -1,0 +1,78 @@
+.place{
+    color: black;
+    width:200px;
+    height:250px;
+    cursor:pointer;
+}
+
+
+
+.fullCard{
+width:100%;
+height:100%;
+transform-style: preserve-3d;
+transition: 1s;
+border:1px solid black;
+border-radius:5px;
+transform: rotatey(180deg);
+
+
+}
+
+
+.frontCard,.backCard{
+position:absolute;
+width:100%;
+height:100%;
+background: linear-gradient(to top right, #264771,#264771, #264771,#416696,white);
+backface-visibility: hidden ;
+border-radius:5px;
+
+
+
+}
+
+
+.cardHeader{
+    border:1px solid orange;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.atributos{
+    display: flex;
+    justify-content: space-around;
+}
+
+.infoBox{
+background:#ddd;
+width:150px;
+height: 80px;
+margin:auto;
+margin-top: 20px;
+padding: 10px;
+display: flex;
+flex-direction: column;
+text-align: center;
+border-radius: 5px;
+font-size: 12px;
+border: 1px solid black;
+
+}
+
+
+
+
+.frontCard{
+z-index:-1;
+text-align:center;
+transform: rotatey(180deg);
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+
+
+

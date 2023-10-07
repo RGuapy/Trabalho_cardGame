@@ -1,0 +1,24 @@
+{
+    "cards":[
+        {
+            "id": 11,
+            "dateCriacao": "2023-09-18T23:17:52.861Z",
+            "dateAlteracao": "2023-09-18T23:17:52.861Z",
+            "card_name": "Cacatua Arqueira",
+            "card_type": "air",
+            "card_atk": 2500,
+            "card_life": 1000,
+            "card_desc": "Rápida e poderosa. Testemunhas relatam flechas aparecendo repentinamete no peito dos seus alvos"
+        },{
+            "id": 12,
+            "dateCriacao": "2023-09-18T23:19:55.130Z",
+            "dateAlteracao": "2023-09-18T23:19:55.130Z",
+            "card_name": "Tatu",
+            "card_type": "earth",
+            "card_atk": 100000000,
+            "card_life": 1000,
+            "card_desc": "Fica de Baixo da terra"
+        }
+    ]
+}
+
