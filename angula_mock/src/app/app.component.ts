@@ -8,30 +8,34 @@ import data from '../assets/data.json';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+
+// implements OnInit
+export class AppComponent  {
   constructor(private http: HttpClient) {}
 
 
   title = 'aulamock';
-  items = data.cards
-  cards = null
-  ngOnInit() {
-		// API Call
+  cards = data.cards
+
+  //REQUEST FROM API
+  // cards = null
+  // ngOnInit() {
+	// 	// API Call
 		
-		this.getCard()
+	// 	this.getCard()
 
-  }
+  // }
 
-  getCard(){
-    this.http
-			.get<any>('http://localhost:3000/cards/', {
+  // getCard(){
+  //   this.http
+	// 		.get<any>('http://localhost:3000/cards/', {
 				
-			})
-			.subscribe(data => {
-				console.log(data)
-        this.cards = data
-			});
-  }
+	// 		})
+	// 		.subscribe(data => {
+	// 			console.log(data)
+  //       this.cards = data
+	// 		});
+  // }
 
 
   
