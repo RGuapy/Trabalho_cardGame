@@ -50,9 +50,9 @@ export class CardController extends ControllerBase{
         let validTypes = ["water","fire","earth","air"]
         this.fieldValidation(validTypes.includes(card_type),"card_type não é um tipo válido (water | fire | earth | air)")
         
-        this.fieldValidation((typeof(card_desc) == "number" && card_atk%100 == 0),"card_atk precisa ser 0 ou múltiplo de 100")
+        this.fieldValidation((typeof(card_atk) == "number" && card_atk%100 == 0),"card_atk precisa ser 0 ou múltiplo de 100")
         
-        this.fieldValidation((typeof(card_desc) == "number" && card_life%100 == 0 && card_life > 0),"card_atk precisa ser maior que 0 e múltiplo de 100")
+        this.fieldValidation((typeof(card_life) == "number" && card_life%100 == 0 && card_life > 0),"card_atk precisa ser maior que 0 e múltiplo de 100")
         
         this.fieldValidation(typeof(card_desc) == "string","card_desc precisa ser uma string")
 

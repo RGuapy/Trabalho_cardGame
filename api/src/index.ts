@@ -31,33 +31,33 @@ AppDataSource.initialize().then(async () => {
     // start express server
     app.listen(3000)
 
-    // insert new users for test
-    await AppDataSource.manager.save(
-        AppDataSource.manager.create(User, {
-            firstName: "Timber",
-            lastName: "Saw",
-            age: 27
-        })
-    )
+    // // insert new users for test
+    // await AppDataSource.manager.save(
+    //     AppDataSource.manager.create(User, {
+    //         firstName: "Timber",
+    //         lastName: "Saw",
+    //         age: 27
+    //     })
+    // )
 
-    await AppDataSource.manager.save(
-        AppDataSource.manager.create(User, {
-            firstName: "Phantom",
-            lastName: "Assassin",
-            age: 24
-        })
-    )
+    // await AppDataSource.manager.save(
+    //     AppDataSource.manager.create(User, {
+    //         firstName: "Phantom",
+    //         lastName: "Assassin",
+    //         age: 24
+    //     })
+    // )
 
-    await AppDataSource.manager.save(
-        AppDataSource.manager.create(Card, {
-            card_name:"Cacatua Arqueira",
-            card_type:"air",
-            card_atk:2500,
-            card_life:1000,
-            card_desc:"Rápida e poderosa. Testemunhas relatam flechas aparecendo repentinamete no peito dos seus alvos"
+    // await AppDataSource.manager.save(
+    //     AppDataSource.manager.create(Card, {
+    //         card_name:"Cacatua Arqueira",
+    //         card_type:"air",
+    //         card_atk:2500,
+    //         card_life:1000,
+    //         card_desc:"Rápida e poderosa. Testemunhas relatam flechas aparecendo repentinamete no peito dos seus alvos"
         
-        })
-    )
+    //     })
+    // )
 
 
 

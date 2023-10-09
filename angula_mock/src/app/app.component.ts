@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
 
   title = 'aulamock';
   items = data.cards
-
+  cards = null
   ngOnInit() {
 		// API Call
 		
@@ -28,7 +28,8 @@ export class AppComponent implements OnInit {
 				
 			})
 			.subscribe(data => {
-				console.log(data);
+				console.log(data)
+        this.cards = data
 			});
   }
 
