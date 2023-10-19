@@ -1,6 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import data from '../assets/data.json';
+import { HttpService } from 'src/service/HttpService';
 
 
 @Component({
@@ -10,21 +11,28 @@ import data from '../assets/data.json';
 })
 
 // implements OnInit
-export class AppComponent  {
-  constructor(private http: HttpClient) {}
+export class AppComponent implements OnInit {
+  constructor(private http: HttpService) {}
 
 
   title = 'aulamock';
-  cards = data.cards
+  // cards = data.cards
 
-  //REQUEST FROM API
-  // cards = null
-  // ngOnInit() {
-	// 	// API Call
+  // REQUEST FROM API
+    cards = []
+
+  ngOnInit() {
+		// API Call
 		
-	// 	this.getCard()
+		// this.getCard()
+    let backInfo = this.http.get('http://localhost:3000/cards/')
+    
 
-  // }
+    
+    console.log(backInfo)
+
+
+  }
 
   // getCard(){
   //   this.http
