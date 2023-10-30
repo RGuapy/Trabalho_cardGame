@@ -8,6 +8,10 @@
 }
 
 
+.place:hover{
+    transform:scale(1.5);
+}
+
 
 .fullCard{
 width:100%;
