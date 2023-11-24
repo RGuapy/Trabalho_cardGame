@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { ItemComponent } from './item/item.component';
 import { CardComponent } from './card/card.component';
 import { CardService } from "../service/CardService";
+import { DeckComponent } from './deck/deck.component';
+import { CardAlterComponent } from './card-alter/card-alter.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ItemComponent,
-    CardComponent
+    CardComponent,
+    DeckComponent,
+    CardAlterComponent
   ],
   imports: [
     BrowserModule,

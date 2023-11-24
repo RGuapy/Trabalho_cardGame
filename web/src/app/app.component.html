@@ -1,14 +1,6 @@
 <div id="principal">
 
-  <p>Card Game</p>
-  
- <div id="deck">
-    <app-card *ngFor = "let card of cards" [itemInput]="card">
-    </app-card>
-  </div>
-
-
- 
-  
+  <app-deck [cards]="cards">
+  </app-deck>
 
 </div>

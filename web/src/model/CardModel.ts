@@ -1,12 +1,12 @@
 export interface CardModel{
     
-    id: number,
-    dateCriacao: Date,
-    dateAlteracao: Date,
-    card_name: String,
-    card_type: String,
-    card_atk: number,
-    card_life: number,
-    card_desc: String
+    id: number | undefined,
+    dateCriacao: Date | undefined,
+    dateAlteracao: Date | undefined,
+    card_name: String | undefined,
+    card_type: String | undefined,
+    card_atk: number | undefined,
+    card_life: number | undefined,
+    card_desc: String | undefined
     
 }

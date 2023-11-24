@@ -2,15 +2,10 @@
     color: black;
     width:200px;
     height:275px;
-    cursor:pointer;
     color: white;
     font-weight: 800;
 }
 
-
-.place:hover{
-    transform:scale(1.5);
-}
 
 
 .fullCard{
@@ -109,6 +104,17 @@ flex-direction: column;
 justify-content: space-around;
 }
 
+
+#editar{
+    float: right;
+    font-size: 20px;
+    height: 20px;
+    width: 27px;
+    line-height: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    
+}
 
 
 
