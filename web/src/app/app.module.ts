@@ -9,7 +9,7 @@ import { CardComponent } from './card/card.component';
 import { CardService } from "../service/CardService";
 import { DeckComponent } from './deck/deck.component';
 import { CardAlterComponent } from './card-alter/card-alter.component';
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,8 @@ import { CardAlterComponent } from './card-alter/card-alter.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [CardService],
   bootstrap: [AppComponent]

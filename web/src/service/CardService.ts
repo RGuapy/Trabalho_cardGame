@@ -1,4 +1,4 @@
-import { CardModel } from "src/model/CardModel";
+import { ICard } from "src/interface/ICard";
 import { BaseService } from "./BaseService";
 import { IResultHttp } from "src/interface/IResultHttp";
 import { HttpService } from "./HttpService";
@@ -9,7 +9,7 @@ import { Injectable } from '@angular/core';
 })
 
 
-export class CardService extends BaseService<CardModel>{
+export class CardService extends BaseService<ICard>{
     constructor(public override http:HttpService){
         super('cards',http)
     }

@@ -1,1 +1,4 @@
-<p>card-alter works!</p>
+<div>
+    <label for="cardName">Card Name:</label>
+    <input type="text" id="cardName" [(ngModel)]="model.card_name" (input)="updateCardName($event)">
+</div>

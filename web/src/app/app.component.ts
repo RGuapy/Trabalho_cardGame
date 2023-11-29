@@ -16,23 +16,9 @@ export class AppComponent implements OnInit {
   constructor(private cardService: CardService) {}
 
 
-  cards:any
 
   ngOnInit() {
-    this.cards = data.cards
-    this.getAllCards()
-
-    
-    
-
-  }
-
-  async getAllCards(){
-    let backInfo = await this.cardService.GetAll()
-
-    this.cards = backInfo.data
-    console.log(this.cards)
-   
+    console.log('entrei')
 
   }
 
