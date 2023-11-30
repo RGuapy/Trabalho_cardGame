@@ -7,6 +7,7 @@ import { DeckComponent } from 'src/app/deck/deck.component';
 const routes: Routes = [
 
   { path: 'cardAlter', component: CardAlterComponent },
+  { path: 'cardAlter/:id', component: CardAlterComponent },
   { path: 'deck', component: DeckComponent }
 ];
 

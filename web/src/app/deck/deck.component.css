@@ -10,7 +10,7 @@
     border: 10px solid black;
 
     width: 1000px;
-    height: 600px;
+    height: auto;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;

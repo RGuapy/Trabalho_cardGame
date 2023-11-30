@@ -14,7 +14,7 @@ import { CardModel } from 'src/model/CardModel';
 export class CardAlterComponent implements OnInit{
 
   model: CardModel = new CardModel();
-
+  buttonTitulo: string = 'Alterar';
 
   constructor(
     private cardSrv: CardService,
@@ -23,11 +23,9 @@ export class CardAlterComponent implements OnInit{
   ) { }
 
   ngOnInit() {
-    this.model.card_name = "teste"
 
     
     this.active.params.subscribe((p) =>{
-      console.log(p['id'])
       if(p['id'] ){
         this.getId(p['id'])
       }
@@ -37,14 +35,16 @@ export class CardAlterComponent implements OnInit{
   }
 
   async getId(id: string): Promise<void> {
-    if (id === 'new') { return; }
+    if (id === 'new') { 
+      this.buttonTitulo = 'Criar'
+      return; }
     const result = await this.cardSrv.GetById(id);
     this.model = result.data as CardModel;
   }
 
   async save(): Promise<void> {
     const result = await this.cardSrv.post(this.model);
-    if (result.sucesso) {
+    if (result.status == 200) {
       this.router.navigateByUrl('/deck');
     }
   }

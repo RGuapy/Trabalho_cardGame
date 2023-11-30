@@ -1,4 +1,27 @@
-<div>
-    <label for="cardName">Card Name:</label>
-    <input type="text" id="cardName" [(ngModel)]="model.card_name" (input)="updateCardName($event)">
+<div id="cardAlterForm">
+
+        <label for="cardName">Card Name:</label>
+        <input type="text" id="cardName" [(ngModel)]="model.card_name">
+
+        <label for="cardType">Card Type:</label>
+        <select name="" id="cardType" [(ngModel)]="model.card_type">
+            <option value="air">air</option>
+            <option value="earth">earth</option>
+            <option value="fire">fire</option>
+            <option value="water">water</option>
+        </select>
+
+        <label for="cardAtk">Card Attack:</label>
+        <input type="number" id="cardAtk" [(ngModel)]="model.card_atk">
+
+        <label for="cardLife">Card Life:</label>
+        <input type="number" id="cardLife" [(ngModel)]="model.card_life">
+
+        
+        <label for="cardDes">Card Description:</label>
+        <input type="text" id="cardDes" [(ngModel)]="model.card_desc">
+
+       <button type="button" (click)="save()" id="submitButton">{{this.buttonTitulo}}</button>
+
+
 </div>
