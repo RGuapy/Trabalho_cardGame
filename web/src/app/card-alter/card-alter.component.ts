@@ -43,17 +43,16 @@ export class CardAlterComponent implements OnInit{
   }
 
   async save(): Promise<void> {
-    const result = await this.cardSrv.post(this.model);
+    let id = (this.model.id)?.toString()
+
+    const result = await this.cardSrv.post(this.model,id);
     if (result.status == 200) {
       this.router.navigateByUrl('/deck');
     }
   }
 
 
-  updateCardName(event: Event): void {
-    const inputElement = event.target as HTMLInputElement;
-    this.model.card_name = inputElement.value;
-  }
+
 
 
 }

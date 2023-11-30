@@ -59,6 +59,11 @@ export const Routes = [{
     controller: CardController,
     action: "save"
 }, {
+    method: "post",
+    route: "/cards/:id",
+    controller: CardController,
+    action: "save"
+}, {
     method: "delete",
     route: "/cards/:id",
     controller: CardController,

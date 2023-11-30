@@ -1,4 +1,6 @@
 import { Component,Input,OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { CardService } from "src/service/CardService";
 
 @Component({
   selector: 'app-card',
@@ -7,6 +9,13 @@ import { Component,Input,OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit{
   @Input() itemInput: any;
+
+
+  constructor(
+    private cardSrv: CardService,
+    private router: Router,
+    private active: ActivatedRoute
+  ) { }
 
   teste = ""
 
@@ -28,6 +37,14 @@ export class CardComponent implements OnInit{
     }
   }
   
+
+  async delete(): Promise<void> {
+    let id = (this.itemInput.id)?.toString()
+    const result = await this.cardSrv.delete(id);
+    if (result.status == 200) {
+      this.router.navigateByUrl('/deck');
+    }      
+  }
   
 
 }

@@ -21,8 +21,9 @@ export abstract class BaseService<T> {
     return this.http.get(`${this.urlBase}/${id}`);
   }
 
-  public post(model: T): Promise<IResultHttp> {
-    return this.http.post(this.urlBase, model);
+  public post(model: T,id: string | undefined): Promise<IResultHttp> {
+    console.log(model)
+    return this.http.post(`${this.urlBase}/${id}`, model);
   }
 
   public delete(id: string|undefined): Promise<IResultHttp> {    

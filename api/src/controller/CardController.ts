@@ -28,7 +28,9 @@ export class CardController extends ControllerBase{
     }
 
     async save(request: Request, response: Response, next: NextFunction) {
-        const { card_name, card_type, card_atk,card_life,card_desc } = request.body;
+       const id = parseInt(request.params.id)
+
+       const { card_name, card_type, card_atk,card_life,card_desc } = request.body;
        this.isRequired(card_name,"Valor card_name necessário")
        this.isRequired(card_type,"Valor card_type necessário")
        this.isRequired(card_atk,"Valor card_atk necessário")
@@ -64,12 +66,29 @@ export class CardController extends ControllerBase{
             }
         }
 
+        let card2 = undefined
+        if(id){
+            card2 = await this.cardRepository.findOne({
+                where: { id }
+            })
 
-        const card = Object.assign(new Card(), {
-            card_name, card_type, card_atk,card_life,card_desc
-        })
+        }
+        
+        if (!card2) {
+            card2 = Object.assign(new Card(), {
+                card_name, card_type, card_atk,card_life,card_desc
+            })
+        }else{
+            card2.card_name = card_name
+            card2.card_type = card_type
+            card2.card_atk = card_atk
+            card2.card_life = card_life
+            card2.card_desc = card_desc
+        }
 
-        return this.cardRepository.save(card)
+        
+
+        return this.cardRepository.save(card2)
     }
 
     async remove(request: Request, response: Response, next: NextFunction) {
