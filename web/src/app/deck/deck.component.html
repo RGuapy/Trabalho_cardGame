@@ -4,6 +4,10 @@
     <div id="deck">
         <app-card *ngFor = "let card of cards" [itemInput]="card">
         </app-card>
-    </div>
 
+        <div id="buttonPlace">
+            <div class="button_plus" routerLink="/cardAlter/new"></div>
+        </div>
+
+    </div>
 </div>

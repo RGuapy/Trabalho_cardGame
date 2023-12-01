@@ -41,9 +41,15 @@ export class CardComponent implements OnInit{
   async delete(): Promise<void> {
     let id = (this.itemInput.id)?.toString()
     const result = await this.cardSrv.delete(id);
-    if (result.status == 200) {
-      this.router.navigateByUrl('/deck');
-    }      
+    
+      
+    // this.router.navigateByUrl('/deck');
+    // this.router.navigate([this.router.url], { replaceUrl: true });
+    window.location.reload();
+          
+
+
+    
   }
   
 

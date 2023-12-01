@@ -22,7 +22,6 @@ export abstract class BaseService<T> {
   }
 
   public post(model: T,id: string | undefined): Promise<IResultHttp> {
-    console.log(model)
     return this.http.post(`${this.urlBase}/${id}`, model);
   }
 

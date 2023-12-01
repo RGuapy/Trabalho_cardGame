@@ -46,8 +46,16 @@ export class CardAlterComponent implements OnInit{
     let id = (this.model.id)?.toString()
 
     const result = await this.cardSrv.post(this.model,id);
-    if (result.status == 200) {
+    console.log(result.data.status)
+    if (result.data.status == 200 || !result.data.status) {
       this.router.navigateByUrl('/deck');
+    }else{
+      let errosAtual = ""
+      result.data.errors.forEach((erro: Array<Object>) => {
+        errosAtual += JSON.stringify(erro) + "\n"
+      });
+
+      alert(errosAtual)
     }
   }
 
